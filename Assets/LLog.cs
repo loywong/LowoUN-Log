@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace LowoUN.Util {
-	public static class Log {
+	public static class LLog {
 		// 是否允许Unity运行时日志
 		static void SetLogEnabled (bool isRuntimeLogEnabled) {
 #if UNITY_EDITOR
@@ -24,7 +24,7 @@ namespace LowoUN.Util {
 
 		public static void Init (bool isDebug) {
 			if (!isDebug) {
-				Log.SetOpen (0);
+				LLog.SetOpen (0);
 				return;
 			}
 	
@@ -35,7 +35,7 @@ namespace LowoUN.Util {
 			for (int i = 0; i < str.Length; i++) {
 				// Debug.Log("___"+str[i]);
 				if (i == 0) {
-					Log.SetOpen (int.Parse (str[0]));
+					LLog.SetOpen (int.Parse (str[0]));
 					continue;
 				}
 
@@ -46,7 +46,7 @@ namespace LowoUN.Util {
 				string[] ss = str[i].Split ('#');
 				// Debug.Log("________ "+ss.Length);
 				if (ss.Length == 1)
-					Log.OpenTag (str[i].Trim ());
+					LLog.OpenTag (str[i].Trim ());
 			}
 		}
 

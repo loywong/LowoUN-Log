@@ -6,21 +6,21 @@ using UnityEngine;
 public class Sample_Log : MonoBehaviour {
 	[SerializeField] bool isDebug;
 	void Start () {
-		Log.Init (isDebug);
+		LLog.Init (isDebug);
 
-		Log.Warn("some warning log");
-		Log.Error("some error log");
+		LLog.Warn("some warning log");
+		LLog.Error("some error log");
 
-		Log.Blue("data","log data");
-		Log.Gray("asset","log asset");
-		Log.Gray("ui","log ui");
-		Log.Green("scene","log scene");
-		Log.Green("flow","log flow");
-		Log.Trace("util","log util");
-		Log.Orange("test","log test");
+		LLog.Blue("data","log data");
+		LLog.Gray("asset","log asset");
+		LLog.Gray("ui","log ui");
+		LLog.Green("scene","log scene");
+		LLog.Green("flow","log flow");
+		LLog.Trace("util","log util");
+		LLog.Orange("test","log test");
 
-		Log.Trace("map","log map");
-		Log.Trace("battle","log battle");
-		Log.Trace("nav","log nav");
+		LLog.Trace("map","log map");
+		LLog.Trace("battle","log battle");
+		LLog.Trace("nav","log nav");
 	}
 }
